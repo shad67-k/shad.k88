@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🏎 Remastered Racing Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>🏁 Remastered Racing Game</h1>
+
+<div class="hud">
+    Speed: <span id="speed">0</span> |
+    Score: <span id="score">0</span> |
+    Steps Remaining: <span id="steps">0</span> |
+    AI: <span id="aiStatus">OFF</span>
+    <button id="toggleAI">Toggle AI</button>
+    <!-- 🔴 Start / Stop buttons added -->
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+</div>
+
+<canvas id="gameCanvas" width="900" height="700"></canvas>
+
+<div id="gameOverScreen" class="overlay hidden">
+    <h2>Game Over!</h2>
+    <p>Score: <span id="finalScore">0</span></p>
+    <button id="restartBtn">Restart</button>
+</div>
+
+<div id="wrongMoveAlert" class="overlay hidden">
+    <h2>❌ Wrong Move!</h2>
+    <p>You cannot do that move again.</p>
+    <button onclick="hideWrongMove()">OK</button>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
